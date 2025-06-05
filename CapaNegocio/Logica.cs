@@ -31,9 +31,8 @@
 
                 int puntos = CalcularPuntos(conteoAccidentes);
 
-
-                string resultado = puntos >= 400 ? "rechazada" : "aprobada";
-                bool aprobada = resultado == "aprobada";
+                bool aprobada = puntos < 400;
+                string resultado = aprobada ? "aprobada" : "rechazada";
 
     
                 var resultadoValidacion = new ResultadoValidacion
